@@ -1,1 +1,2 @@
-# Capstone-Final
+**By Firwin Lee \& Elliot Andelman**
+

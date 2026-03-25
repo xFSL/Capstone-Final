@@ -1,13 +1,13 @@
 import { Tabs } from 'expo-router';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: '#ffd33d',
+                tabBarActiveTintColor: '#3dff98',
                 headerStyle: {
                     backgroundColor: '#25292e',
                 },
@@ -19,7 +19,7 @@ export default function TabLayout() {
             }}
         >
 
-        <Tabs.Screen
+            <Tabs.Screen
                 name="index"
                 options={{
                     title: 'Home',
@@ -33,9 +33,18 @@ export default function TabLayout() {
                 options={{
                     title: 'About',
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
+                        <Ionicons name={focused ? 'add-outline' : 'add-sharp'} color={color} size={24}/>
                     ),
                 }}
+            />
+            <Tabs.Screen
+                    name="map"
+                    options={{
+                        title: 'Map',
+                        tabBarIcon: ({ color, focused }) => (
+                            <Ionicons name={focused ? 'compass-sharp' : 'compass-outline'} color={color} size={24}/>
+                        ),
+                    }}
             />
         </Tabs>
     );
